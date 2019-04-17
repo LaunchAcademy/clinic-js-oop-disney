@@ -1,8 +1,10 @@
-const Soundtrack = require("../Soundtrack.test.js")
+const Character = require("../Character.js")
+const Song = require("../Song.js")
+const Soundtrack = require("../Soundtrack.js")
 
 describe("soundtrack class", () => {
   let genie
-  let alladin
+  let aladdin
   let jafar
   let aWholeNewWorld
   let friendLikeMe
@@ -12,18 +14,19 @@ describe("soundtrack class", () => {
 
   beforeEach(() => {
     genie = new Character('Genie', 'genie', 'Robin Williams', 'hero')
-    alladin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
+    aladdin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
     jafar = new Character('Jafar', 'human', 'Jonathan Freeman', 'villain')
 
     aWholeNewWorld = new Song('A Whole New World', [aladdin, jasmine])
     friendLikeMe = new Song('Friend Like Me', [genie])
     princeAli = new Song('Aladdin', [genie])
-    songArray = [a_whole_new_world, friend_like_me]
+    songArray = [aWholeNewWorld, friendLikeMe]
 
     aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
   });
 
   it("defines a Soundtrack object", () => {
+    console.log("HEY")
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 

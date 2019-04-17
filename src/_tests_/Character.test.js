@@ -1,14 +1,13 @@
 const Character = require("../Character.js")
-const Character = require("../Character.js")
 
 describe("Character class", () => {
   let genie
-  let alladin
+  let aladdin
   let jafar
 
   beforeEach(() => {
     genie = new Character('Genie', 'genie', 'Robin Williams', 'hero')
-    alladin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
+    aladdin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
     jafar = new Character('Jafar', 'human', 'Jonathan Freeman', 'villain')
   });
 
@@ -32,7 +31,6 @@ describe("Character class", () => {
     expect(genie.alisgnmentType).toBe("hero")
   })
 
-
   describe("#summary", () => {
     it("returns a string of the character name and species", () => {
       expect(aladdin.summary()).toBe("Aladdin (human)")
@@ -45,7 +43,7 @@ describe("Character class", () => {
     })
 
     it("returns a string of the character name and species", () => {
-      expect(jafar.hero()).to eq(false)
+      expect(jafar.hero()).toBe(false)
     })
   })
 })

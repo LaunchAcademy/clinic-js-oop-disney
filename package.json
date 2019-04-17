@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "./node_modules/.bin/jest",
+    "test:debug": "./node_modules/.bin/ndb yarn run test"
   },
   "devDependencies": {
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "ndb": "^1.0.44"
   }
 }
