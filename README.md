@@ -1,7 +1,7 @@
 ## Instructions
 
-You have been tasked with creating an Object-Oriented system to keep track of
-the happenings at a certain educational institution not unlike Launch Academy. A few engineers have already provided tests for the features needed for the system. However, they need your help satisfying these tests so that they can track students and their students system check submissions for each of their cohorts. Based on a product planning session, you have determined these are the javascript classes you will need:
+You have been tasked with creating an Object-Oriented app to keep track of
+the happenings all of our favorite disney movies! However, we need your help satisfying these tests so that we can track characters and their soundtracks for each of their movie. Based on a product planning session, you have determined these are the javascript classes you will need:
 
 * `Character`
 * `Song`
