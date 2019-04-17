@@ -1,97 +1,98 @@
-const Movie = require("../Movie.test.js")
+const Movie = require("../Movie.js")
+const Character = require("../Character.js")
+const Song = require("../Song.js")
+const Soundtrack = require("../Soundtrack.js")
+
 
 describe("Character class", () => {
+  let aladdin
   let genie
-  let alladin
   let jafar
+  let jasmine
+  let characterArray
+  let aWholeNewWorld
+  let friendLikeMe
+  let songArray
+  let aladdinSoundtrack
+  let aladdinMovie
 
   beforeEach(() => {
+    aladdin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
     genie = new Character('Genie', 'genie', 'Robin Williams', 'hero')
-    alladin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
     jafar = new Character('Jafar', 'human', 'Jonathan Freeman', 'villain')
+    jasmine = new Character('Jasmine', 'human', 'Linda Larkin', 'hero')
+    characterArray = [aladdin, jafar, jasmine]
+
+    aWholeNewWorld = new Song('A Whole New World', [aladdin, jasmine])
+    friendLikeMe = new Song('Friend Like Me', [genie])
+    songArray = [aWholeNewWorld, friendLikeMe]
+
+    aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
+    aladdinMovie = new Movie('Aladdin', 1992, characterArray, aladdinSoundtrack)
   });
 
   it("defines movie", () => {
-    expect(genie).toBeInstanceOf(Movie)
+    expect(aladdinMovie).toBeInstanceOf(Movie)
   })
 
   it("has an initialized title property", () => {
-    expect(genie.name).toBe("Genie")
+    expect(aladdinMovie.title).toBe("Alladin")
+  })
+
+  it("has an initialized title property", () => {
+    expect(aladdinMovie.year).toBe("Alladin")
+  })
+
+  it("has an initialized title property", () => {
+    expect(aladdinMovie.characters).toBe(characterArray)
+  })
+
+  it("has an initialized title property", () => {
+    expect(aladdinMovie.aladdinSoundtrack).toBe("Alladin")
+  })
+
+  it("initializes with a watch_count of 0", () => {
+    expect(aladdinMovie.watchCount).toBe(0)
+  })
+
+  describe("#watch", () => {
+    it("increases the watch_count by 2 when we call #watch! two times", () => {
+      aladdinMovie.watch()
+      aladdinMovie.watch()
+
+      expect(aladdinMovie.watchCount).toBe(2)
+    })
+  })
+
+  describe("#addCharacter", () => {
+    it("adds an additional element to the characters array", () => {
+      aladdinMovie.addCharacter(genie)
+
+      expect(aladdinSoundtrack.characters.length).toBe(4)
+    })
+
+    it("should include the character passed in as an argument", () => {
+      aladdinMovie.addCharacter(genie)
+
+      expect(aladdinSoundtrack.characters).toContain(genie)
+    })
+  })
+
+  describe("#heroes", () => {
+    it("prints out a list of the heroes", () => {
+      expect(aladdinMovie.heroes()).toBe("Aladdin\nJasmine\n")
+    })
+  })
+
+  describe("#villians", () => {
+    it("prints out a list of the villians", () => {
+      expect(aladdinMovie.villians()).toBe("Jafar\n")
+    })
+  })
+
+  describe("#cast", () => {
+    it("prints out the cast", () => {
+      expect(aladdinMovie.cast()).toBe("Scott Weinger\nLinda Larkin\nJonathan Freeman\n")
+    })
   })
 })
-//
-// describe Movie do
-//   let(:aladdin) { Character.new('Aladdin', 'human', 'Scott Weinger', 'hero') }
-//   let(:genie) { Character.new('Genie', 'genie', 'Robin Williams', 'hero') }
-//   let(:jafar) { Character.new('Jafar', 'human', 'Jonathan Freeman', 'villain') }
-//   let(:jasmine) { Character.new('Jasmine', 'human', 'Linda Larkin', 'hero') }
-//
-//   let(:a_whole_new_world) { Song.new('A Whole New World', [aladdin, jasmine]) }
-//   let(:friend_like_me) { Song.new('Friend Like Me', [genie]) }
-//
-//   let(:aladdin_soundtrack) { Soundtrack.new('Aladdin', [a_whole_new_world, friend_like_me])}
-//
-//   let(:aladdin_movie) { Movie.new('Aladdin', 1992, [aladdin, jasmine, jafar], aladdin_soundtrack) }
-//
-//   describe ".new" do
-//     it "takes a name, year, character array, and soundtrack as arguments" do
-//       expect(aladdin_movie).to be_a(Movie)
-//     end
-//
-//     it "initializes with a watch_count of 0" do
-//       expect(aladdin_movie.watch_count).to eq(0)
-//     end
-//   end
-//
-//   describe "#watch_count" do
-//     it "has a reader" do
-//       expect(aladdin_movie.watch_count).to eq(0)
-//     end
-//
-//     it "does not have a writer" do
-//       expect { aladdin_movie.watch_count = 5 }.to raise_error(NoMethodError)
-//     end
-//   end
-//
-//   describe "#watch!" do
-//     it "increases the watch_count by 2 when we call #watch! two times" do
-//       aladdin_movie.watch!
-//       aladdin_movie.watch!
-//
-//       expect(aladdin_movie.watch_count).to eq(2)
-//     end
-//   end
-//
-//   describe "#characters" do
-//     it "has a reader for 'characters'" do
-//       expect(aladdin_movie.characters).to eq([aladdin, jasmine, jafar])
-//     end
-//   end
-//
-//   describe "#add_character" do
-//     it "adds a character to the 'characters' array" do
-//       aladdin_movie.add_character(genie)
-//
-//       expect(aladdin_movie.characters.count).to eq(4)
-//       expect(aladdin_movie.characters).to include(genie)
-//     end
-//   end
-//
-//   describe "#heroes" do
-//     it "prints out a list of the heroes" do
-//       expect(aladdin_movie.heroes).to eq("Aladdin\nJasmine\n")
-//     end
-//   end
-//
-//   describe "#villains" do
-//     it "prints out a list of the villains" do
-//       expect(aladdin_movie.villains).to eq("Jafar\n")
-//     end
-//   end
-//
-//   describe '#cast' do
-//     it "prints out the cast" do
-//       expect(aladdin_movie.cast).to eq("Scott Weinger\nLinda Larkin\nJonathan Freeman\n")
-//     end
-//   end
-// end
