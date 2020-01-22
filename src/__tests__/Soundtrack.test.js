@@ -26,7 +26,6 @@ describe("soundtrack class", () => {
   });
 
   it("defines a Soundtrack object", () => {
-    console.log("HEY")
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 
@@ -53,7 +52,7 @@ describe("soundtrack class", () => {
   })
 
   describe("printSoundtrack", () => {
-    it("prints out the soundtrack song listing", () => {
+    it.only("prints out the soundtrack song listing", () => {
       expect(aladdinSoundtrack.printSoundtrack()).toBe("A Whole New World\nFriend Like Me\n")
     })
   })
