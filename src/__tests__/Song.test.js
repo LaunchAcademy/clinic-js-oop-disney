@@ -27,7 +27,7 @@ describe("song class", () => {
     expect(aWholeNewWorld.name).toBe('A Whole New World')
   })
 
-  it("has an the correct character list array", () => {
+  it("has the correct character list array", () => {
     expect(aWholeNewWorld.characterList).toBe(characterArray)
   })
 })

@@ -32,9 +32,9 @@ Let the tests guide your development.
 Make the following tests pass by adding code to the `src` folder:
 
 1. `src/Character.test.js`
-2. `src/lib/Song.test.js`
-3. `src/lib/Soundtrack.test.js`
-4. `src/lib/Movie.test.js`
+2. `src/Song.test.js`
+3. `src/Soundtrack.test.js`
+4. `src/Movie.test.js`
 
 We also recommend satisfying each test suite in this order.
 

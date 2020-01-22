@@ -15,20 +15,21 @@ describe("Character class", () => {
     expect(genie).toBeInstanceOf(Character)
   })
 
-  it("has an initialized title property", () => {
+  it("has an initialized name property", () => {
     expect(genie.name).toBe("Genie")
-  })
-
-  it("has an initialized actor property", () => {
-    expect(genie.actor).toBe("Robin Williams")
   })
 
   it("has an initialized species property", () => {
     expect(genie.species).toBe("genie")
   })
 
-  it("has an initialized aslignmentType property", () => {
-    expect(genie.alisgnmentType).toBe("hero")
+  it("has an initialized actor property", () => {
+    expect(genie.actor).toBe("Robin Williams")
+  })
+
+
+  it("has an initialized alignmentType property", () => {
+    expect(genie.alignmentType).toBe("hero")
   })
 
   describe("#summary", () => {
@@ -38,11 +39,11 @@ describe("Character class", () => {
   })
 
   describe("#hero", () => {
-    it("returns a string of the character name and species", () => {
+    it("returns true if the character is a hero", () => {
       expect(aladdin.hero()).toBe(true)
     })
 
-    it("returns a string of the character name and species", () => {
+    it("returns true if the character is a hero", () => {
       expect(jafar.hero()).toBe(false)
     })
   })

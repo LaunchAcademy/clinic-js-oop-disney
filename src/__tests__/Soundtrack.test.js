@@ -42,7 +42,7 @@ describe("soundtrack class", () => {
     it("adds a song that increases song length by one", () => {
       aladdinSoundtrack.addSong(princeAli)
 
-      expect(aladdinSoundtrack.songs.length).toBe(songArray)
+      expect(aladdinSoundtrack.songs.length).toBe(songArray.length)
     })
 
     it("adds a song to the 'songs' array", () => {
@@ -54,7 +54,6 @@ describe("soundtrack class", () => {
 
   describe("printSoundtrack", () => {
     it("prints out the soundtrack song listing", () => {
-
       expect(aladdinSoundtrack.printSoundtrack()).toBe("A Whole New World\nFriend Like Me\n")
     })
   })

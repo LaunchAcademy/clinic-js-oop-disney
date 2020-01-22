@@ -36,19 +36,7 @@ describe("Character class", () => {
   })
 
   it("has an initialized title property", () => {
-    expect(aladdinMovie.title).toBe("Alladin")
-  })
-
-  it("has an initialized title property", () => {
-    expect(aladdinMovie.year).toBe("Alladin")
-  })
-
-  it("has an initialized title property", () => {
-    expect(aladdinMovie.characters).toBe(characterArray)
-  })
-
-  it("has an initialized title property", () => {
-    expect(aladdinMovie.aladdinSoundtrack).toBe("Alladin")
+    expect(aladdinMovie.title).toBe("Aladdin")
   })
 
   it("initializes with a watch_count of 0", () => {
@@ -65,16 +53,16 @@ describe("Character class", () => {
   })
 
   describe("#addCharacter", () => {
-    it("adds an additional element to the characters array", () => {
+    it.only("adds an additional element to the characters array", () => {
       aladdinMovie.addCharacter(genie)
 
-      expect(aladdinSoundtrack.characters.length).toBe(4)
+      expect(aladdinMovie.characters.length).toBe(4)
     })
 
     it("should include the character passed in as an argument", () => {
       aladdinMovie.addCharacter(genie)
 
-      expect(aladdinSoundtrack.characters).toContain(genie)
+      expect(aladdinMovie.characters).toContain(genie)
     })
   })
 
