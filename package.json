@@ -1,15 +1,17 @@
 {
-  "name": "tdd-perimeter-function",
+  "name": "clinic-js-oop-disney",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "test:debug": "./node_modules/.bin/ndb yarn run test"
+    "test:debug": "./node_modules/.bin/jest --inspect-brk"
   },
   "devDependencies": {
-    "jest": "^24.7.1",
-    "ndb": "^1.0.44"
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1"
   }
 }
