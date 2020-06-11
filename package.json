@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "test": "./node_modules/.bin/jest",
     "test:debug": "./node_modules/.bin/ndb yarn run test"

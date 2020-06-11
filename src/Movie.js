@@ -1,5 +1,3 @@
-class Movie {
+class Movie {}
 
-}
-
-module.exports = Movie
+export default Movie

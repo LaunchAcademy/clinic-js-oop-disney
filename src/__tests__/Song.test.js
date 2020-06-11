@@ -1,10 +1,10 @@
-const Character = require("../Character.js")
-const Song = require("../Song.js")
+import Character from '../Character.js'
+import Song from '../Song.js'
 
-describe("song class", () => {
+describe('song class', () => {
   let aladdin
   let genie
-  let jafar
+  let jasmine
   let aWholeNewWorld
   let friendLikeMe
   let characterArray
@@ -17,17 +17,17 @@ describe("song class", () => {
 
     aWholeNewWorld = new Song('A Whole New World', characterArray)
     friendLikeMe = new Song('Friend Like Me', [genie])
-  });
+  })
 
-  it("defines a Song object", () => {
+  it('defines a Song object', () => {
     expect(aWholeNewWorld).toBeInstanceOf(Song)
   })
 
-  it("has an initialized name property", () => {
+  it('has an initialized name property', () => {
     expect(aWholeNewWorld.name).toBe('A Whole New World')
   })
 
-  it("has the correct character list array", () => {
+  it('has the correct character list array', () => {
     expect(aWholeNewWorld.characterList).toBe(characterArray)
   })
 })

@@ -1,7 +1,7 @@
-const Movie = require("./src/Movie.js")
-const Character = require("./src/Character.js")
-const Song = require("./src/Song.js")
-const Soundtrack = require("./src/Soundtrack.js")
+import Movie from './src/Movie.js'
+import Character from './src/Character.js'
+import Song from './src/Song.js'
+import Soundtrack from './src/Soundtrack.js'
 
 let aladdin
 let genie

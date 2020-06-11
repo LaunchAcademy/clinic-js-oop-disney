@@ -1,5 +1,3 @@
-class Soundtrack {
+class Soundtrack {}
 
-}
-
-module.exports = Soundtrack
+export default Soundtrack

@@ -1,8 +1,8 @@
-const Character = require("../Character.js")
-const Song = require("../Song.js")
-const Soundtrack = require("../Soundtrack.js")
+import Character from '../Character.js'
+import Song from '../Song.js'
+import Soundtrack from '../Soundtrack.js'
 
-describe("soundtrack class", () => {
+describe('soundtrack class', () => {
   let genie
   let aladdin
   let jafar
@@ -23,23 +23,23 @@ describe("soundtrack class", () => {
     songArray = [aWholeNewWorld, friendLikeMe]
 
     aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
-  });
+  })
 
-  it("defines a Soundtrack object", () => {
-    console.log("HEY")
+  it('defines a Soundtrack object', () => {
+    console.log('HEY')
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 
-  it("has an initialized name property", () => {
+  it('has an initialized name property', () => {
     expect(aladdinSoundtrack.name).toBe('Aladdin')
   })
 
-  it("has an initialized songs property", () => {
+  it('has an initialized songs property', () => {
     expect(aladdinSoundtrack.songs).toBe(songArray)
   })
 
-  describe("#addSong", () => {
-    it("adds a song that increases song length by one", () => {
+  describe('#addSong', () => {
+    it('adds a song that increases song length by one', () => {
       aladdinSoundtrack.addSong(princeAli)
 
       expect(aladdinSoundtrack.songs.length).toBe(songArray.length)
@@ -52,9 +52,11 @@ describe("soundtrack class", () => {
     })
   })
 
-  describe("printSoundtrack", () => {
-    it("prints out the soundtrack song listing", () => {
-      expect(aladdinSoundtrack.printSoundtrack()).toBe("A Whole New World\nFriend Like Me\n")
+  describe('printSoundtrack', () => {
+    it('prints out the soundtrack song listing', () => {
+      expect(aladdinSoundtrack.printSoundtrack()).toBe(
+        'A Whole New World\nFriend Like Me\n'
+      )
     })
   })
 })
