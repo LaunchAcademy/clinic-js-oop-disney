@@ -26,15 +26,14 @@ describe('soundtrack class', () => {
   })
 
   it('defines a Soundtrack object', () => {
-    console.log('HEY')
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 
-  it('has an initialized name property', () => {
+  it('has a provided name property', () => {
     expect(aladdinSoundtrack.name).toBe('Aladdin')
   })
 
-  it('has an initialized songs property', () => {
+  it('has a provided songs array property', () => {
     expect(aladdinSoundtrack.songs).toBe(songArray)
   })
 

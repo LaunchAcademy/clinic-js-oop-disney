@@ -23,11 +23,11 @@ describe('song class', () => {
     expect(aWholeNewWorld).toBeInstanceOf(Song)
   })
 
-  it('has an initialized name property', () => {
+  it('has a provided name property', () => {
     expect(aWholeNewWorld.name).toBe('A Whole New World')
   })
 
-  it('has the correct character list array', () => {
+  it('has a provided character list array property', () => {
     expect(aWholeNewWorld.characterList).toBe(characterArray)
   })
 })

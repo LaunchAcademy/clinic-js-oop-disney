@@ -51,37 +51,45 @@ describe('Character class', () => {
     })
   })
 
-  describe('#addCharacter', () => {
-    it.only('adds an additional element to the characters array', () => {
-      aladdinMovie.addCharacter(genie)
-
-      expect(aladdinMovie.characters.length).toBe(4)
+  describe('has characters', () => {
+    beforeEach(() => {
+      aladdinMovie.addCharacter(aladdin)
+      aladdinMovie.addCharacter(jasmine)
+      aladdinMovie.addCharacter(jafar)
     })
 
-    it('should include the character passed in as an argument', () => {
-      aladdinMovie.addCharacter(genie)
+    describe('#addCharacter', () => {
+      it('adds an additional element to the characters array', () => {
+        aladdinMovie.addCharacter(genie)
 
-      expect(aladdinMovie.characters).toContain(genie)
+        expect(aladdinMovie.characters.length).toBe(4)
+      })
+
+      it('should include the character passed in as an argument', () => {
+        aladdinMovie.addCharacter(genie)
+
+        expect(aladdinMovie.characters).toContain(genie)
+      })
     })
-  })
 
-  describe('#heroes', () => {
-    it('prints out a list of the heroes', () => {
-      expect(aladdinMovie.heroes()).toBe('Aladdin\nJasmine\n')
+    describe('#heroes', () => {
+      it('prints out a list of the heroes', () => {
+        expect(aladdinMovie.heroes()).toBe('Aladdin\nJasmine\n')
+      })
     })
-  })
 
-  describe('#villians', () => {
-    it('prints out a list of the villians', () => {
-      expect(aladdinMovie.villians()).toBe('Jafar\n')
+    describe('#villains', () => {
+      it('prints out a list of the villians', () => {
+        expect(aladdinMovie.villains()).toBe('Jafar\n')
+      })
     })
-  })
 
-  describe('#cast', () => {
-    it('prints out the cast', () => {
-      expect(aladdinMovie.cast()).toBe(
-        'Scott Weinger\nLinda Larkin\nJonathan Freeman\n'
-      )
+    describe('#cast', () => {
+      it('prints out the cast', () => {
+        expect(aladdinMovie.cast()).toBe(
+          'Scott Weinger\nLinda Larkin\nJonathan Freeman\n'
+        )
+      })
     })
   })
 })

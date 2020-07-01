@@ -1,4 +1,4 @@
-import Character from '../Character.js'
+// import Character from '../Character.js'
 
 describe('Character class', () => {
   let genie
@@ -37,13 +37,13 @@ describe('Character class', () => {
     })
   })
 
-  describe('#hero', () => {
+  describe('#isHero', () => {
     it('returns true if the character is a hero', () => {
-      expect(aladdin.hero()).toBe(true)
+      expect(aladdin.isHero()).toBe(true)
     })
 
     it('returns true if the character is a hero', () => {
-      expect(jafar.hero()).toBe(false)
+      expect(jafar.isHero()).toBe(false)
     })
   })
 })
