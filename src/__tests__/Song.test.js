@@ -1,7 +1,7 @@
 import Character from '../Character.js'
 import Song from '../Song.js'
 
-describe('song class', () => {
+describe('Song class', () => {
   let aladdin
   let genie
   let jasmine

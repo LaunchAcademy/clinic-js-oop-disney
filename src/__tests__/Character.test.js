@@ -42,7 +42,7 @@ describe('Character class', () => {
       expect(aladdin.isHero()).toBe(true)
     })
 
-    it('returns true if the character is a hero', () => {
+    it('returns false if the character is a villain', () => {
       expect(jafar.isHero()).toBe(false)
     })
   })

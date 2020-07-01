@@ -2,7 +2,7 @@ import Character from '../Character.js'
 import Song from '../Song.js'
 import Soundtrack from '../Soundtrack.js'
 
-describe('soundtrack class', () => {
+describe('Soundtrack class', () => {
   let genie
   let aladdin
   let jafar
