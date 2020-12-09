@@ -42,8 +42,8 @@ describe('Movie class', () => {
     expect(aladdinMovie.year).toBe(1992)
   })
 
-  it('has an initialized characterArray property', () => {
-    expect(aladdinMovie.characterArray).toBe(characterArray)
+  it('has an initialized characters property', () => {
+    expect(aladdinMovie.characters).toBe(characterArray)
   })
 
   it('has an initialized soundtrack property', () => {
@@ -84,7 +84,7 @@ describe('Movie class', () => {
   })
 
   describe('#villains', () => {
-    it('prints out a list of the villians', () => {
+    it('prints out a list of the villains', () => {
       expect(aladdinMovie.villains()).toBe('Jafar\n')
     })
   })
