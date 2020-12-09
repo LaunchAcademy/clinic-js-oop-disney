@@ -38,20 +38,16 @@ describe('Soundtrack class', () => {
   })
 
   describe('#addSong', () => {
-    it('adds a song that increases song length by one', () => {
+    it('adds a song that increases songs length by one', () => {
+      expect(aladdinSoundtrack.songs.length).toBe(2)
+      
       aladdinSoundtrack.addSong(princeAli)
-
-      expect(aladdinSoundtrack.songs.length).toBe(songArray.length)
-    })
-
-    it("adds a song to the 'songs' array", () => {
-      aladdinSoundtrack.addSong(princeAli)
-
-      expect(aladdinSoundtrack.songs).toContain(princeAli)
+     
+      expect(aladdinSoundtrack.songs.length).toBe(3)
     })
   })
 
-  describe('printSoundtrack', () => {
+  describe('#printSoundtrack', () => {
     it('prints out the soundtrack song listing', () => {
       expect(aladdinSoundtrack.printSoundtrack()).toBe(
         'A Whole New World\nFriend Like Me\n'
