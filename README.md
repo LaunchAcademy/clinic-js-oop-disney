@@ -1,7 +1,6 @@
 ## Instructions
 
-You have been tasked with creating an Object-Oriented app to keep track of
-the happenings all of our favorite disney movies! However, we need your help satisfying these tests so that we can track characters and their soundtracks for each of their movie. Based on a product planning session, you have determined these are the javascript classes you will need:
+You have been tasked with creating an Object-Oriented app to keep track of all of our favorite Disney movies! However, we need your help satisfying these tests so that we can track characters and their soundtracks to the correct movie. Based on a product planning session, you have determined these are the javascript classes you will need:
 
 * `Character`
 * `Song`
@@ -22,19 +21,19 @@ $ yarn test
 Note: we recommend running one test at a time:
 
 ```
-  yarn test src/Character.test.js
+  yarn run test src/__tests__/01_Character.test.js
 ```
 
 Let the tests guide your development.
 
 ## Meeting Expectations Requirements
 
-Make the following tests pass by adding code to the `src` folder:
+Make the following tests pass by adding code to the `src/__tests__` folder:
 
-1. `src/Character.test.js`
-2. `src/Song.test.js`
-3. `src/Soundtrack.test.js`
-4. `src/Movie.test.js`
+1. `src/__tests__/01_Character.test.js`
+2. `src/__tests__/02_Song.test.js`
+3. `src/__tests__/03_Soundtrack.test.js`
+4. `src/__tests__/04_Movie.test.js`
 
 We also recommend satisfying each test suite in this order.
 
@@ -47,7 +46,3 @@ We also recommend satisfying each test suite in this order.
   - If you're confused by the error check the actual test file to see how it's set up.
   - Do the simplest implementation, without "hard coding" values, that corrects the error.
   - Repeat.
-* Once the test suite is passing, disregarding tests that start with `exceedsExpectations`, please submit your code by running `et submit`.
-* **DO NOT** start the requirements for exceeding expectations before you have completed the requirements necessary for meeting expectations.
-
-## Extra Credit
