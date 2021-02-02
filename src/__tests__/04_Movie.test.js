@@ -70,7 +70,7 @@ describe('Movie class', () => {
       expect(aladdinMovie.characters.length).toBe(4)
     })
 
-    it('should include the character passed in as an argument', () => {
+    it('should include the new character in the array', () => {
       aladdinMovie.addCharacter(genie)
 
       expect(aladdinMovie.characters).toContain(genie)

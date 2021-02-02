@@ -29,26 +29,21 @@ describe('Soundtrack class', () => {
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 
-  it('has a provided name property', () => {
+  it('has an initialized name property', () => {
     expect(aladdinSoundtrack.name).toBe('Aladdin')
   })
 
-  it('has a provided songs array property', () => {
+  it('has an initialized songs array property', () => {
     expect(aladdinSoundtrack.songs).toBe(songArray)
   })
 
   describe('#addSong', () => {
-    it('adds a song that increases song length by one', () => {
+    it('adds a song to the songs array', () => {
       expect(aladdinSoundtrack.songs.length).toBe(2)
-      
+
       aladdinSoundtrack.addSong(princeAli)
 
       expect(aladdinSoundtrack.songs.length).toBe(3)
-    })
-
-    it("adds a song to the 'songs' array", () => {
-      aladdinSoundtrack.addSong(princeAli)
-
       expect(aladdinSoundtrack.songs).toContain(princeAli)
     })
   })
