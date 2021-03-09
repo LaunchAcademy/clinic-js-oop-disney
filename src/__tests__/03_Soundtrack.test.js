@@ -40,7 +40,6 @@ describe('Soundtrack class', () => {
   describe('#addSong', () => {
     it('adds a song to the songs array', () => {
       expect(aladdinSoundtrack.songs.length).toBe(2)
-
       aladdinSoundtrack.addSong(princeAli)
 
       expect(aladdinSoundtrack.songs.length).toBe(3)
