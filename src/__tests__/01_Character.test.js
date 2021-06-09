@@ -38,11 +38,11 @@ describe('Character class', () => {
   })
 
   describe('#isHero', () => {
-    it('returns true if the character is a hero', () => {
+    it.only('returns true if the character is a hero', () => {
       expect(aladdin.isHero()).toBe(true)
     })
 
-    it('returns false if the character is a villain', () => {
+    it.only('returns false if the character is a villain', () => {
       expect(jafar.isHero()).toBe(false)
     })
   })
