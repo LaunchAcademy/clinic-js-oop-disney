@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest --runInBand"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
