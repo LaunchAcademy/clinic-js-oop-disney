@@ -55,6 +55,7 @@ describe('Movie class', () => {
   })
 
   describe('#watch', () => {
+
     it('increases the watchCount by 2 when we call #watch two times', () => {
       aladdinMovie.watch()
       aladdinMovie.watch()
@@ -65,6 +66,7 @@ describe('Movie class', () => {
 
   describe('#addCharacter', () => {
     it('adds an additional element to the characters array', () => {
+      expect(aladdinMovie.characters.length).toBe(3)
       aladdinMovie.addCharacter(genie)
 
       expect(aladdinMovie.characters.length).toBe(4)
@@ -90,7 +92,7 @@ describe('Movie class', () => {
   })
 
   describe('#cast', () => {
-    it('prints out the cast', () => {
+    it('prints out all of the cast', () => {
       expect(aladdinMovie.cast()).toBe(
         'Scott Weinger\nLinda Larkin\nJonathan Freeman\n'
       )
