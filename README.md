@@ -1,27 +1,27 @@
-## Instructions
+# Instructions
 
-You have been tasked with creating an Object-Oriented app to keep track of all of our favorite Disney movies! However, we need your help satisfying these tests so that we can track characters and their soundtracks to the correct movie. Based on a product planning session, you have determined these are the javascript classes you will need:
+You have been tasked with creating an Object-Oriented app to keep track of all of our favorite Disney movies! However, we need your help in satisfying these tests so that we can track characters and their soundtracks to the correct movie. Based on a product planning session, you have determined these are the javascript classes you will need:
 
 - `Character`
 - `Song`
 - `Soundtrack`
 - `Movie`
 
-### Getting Set Up
+## Getting Set Up
 
 Run the following commands from your terminal:
 
-```
-$ git clone https://github.com/LaunchAcademy/clinic-js-oop-disney.git
-$ cd clinic-js-oop-disney
-$ yarn install
-$ yarn test
+```no-highlight
+git clone https://github.com/LaunchAcademy/clinic-js-oop-disney.git
+cd clinic-js-oop-disney
+yarn install
+yarn test
 ```
 
 Note: we recommend running one test at a time:
 
-```
-  yarn run test src/__tests__/01_Character.test.js
+```no-highlight
+yarn run test src/__tests__/01_Character.test.js
 ```
 
 Let the tests guide your development.
