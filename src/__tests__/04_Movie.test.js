@@ -65,6 +65,8 @@ describe('Movie class', () => {
 
   describe('#addCharacter', () => {
     it('adds an additional element to the characters array', () => {
+      expect(aladdinMovie.characters.length).toBe(3)
+
       aladdinMovie.addCharacter(genie)
 
       expect(aladdinMovie.characters.length).toBe(4)
@@ -79,6 +81,7 @@ describe('Movie class', () => {
 
   describe('#heroes', () => {
     it('prints out a list of the heroes', () => {
+      console.log(aladdinMovie.heroes())
       expect(aladdinMovie.heroes()).toBe('Aladdin\nJasmine\n')
     })
   })

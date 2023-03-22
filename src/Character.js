@@ -5,6 +5,20 @@ class Character {
     this.actor = actor
     this.alignmentType = alignmentType
   }
+
+  summary() {
+    return `${this.name} (${this.species})`
+  }
+
+  isHero() {
+    return this.alignmentType === "hero"
+    
+    // if (this.alignmentType === "hero") {
+    //   return true
+    // } else {
+    //   return false
+    // }
+  }
 }
 
 export default Character
