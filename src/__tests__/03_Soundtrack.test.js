@@ -1,8 +1,8 @@
-import Character from '../Character.js'
-import Song from '../Song.js'
-import Soundtrack from '../Soundtrack.js'
+import Character from "../Character.js"
+import Song from "../Song.js"
+import Soundtrack from "../Soundtrack.js"
 
-describe('Soundtrack class', () => {
+describe("Soundtrack class", () => {
   let genie
   let aladdin
   let jafar
@@ -13,32 +13,32 @@ describe('Soundtrack class', () => {
   let songArray
 
   beforeEach(() => {
-    genie = new Character('Genie', 'genie', 'Robin Williams', 'hero')
-    aladdin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
-    jafar = new Character('Jafar', 'human', 'Jonathan Freeman', 'villain')
+    genie = new Character("Genie", "genie", "Robin Williams", "hero")
+    aladdin = new Character("Aladdin", "human", "Scott Weinger", "hero")
+    jafar = new Character("Jafar", "human", "Jonathan Freeman", "villain")
 
-    aWholeNewWorld = new Song('A Whole New World', [aladdin, jasmine])
-    friendLikeMe = new Song('Friend Like Me', [genie])
-    princeAli = new Song('Aladdin', [genie])
+    aWholeNewWorld = new Song("A Whole New World", [aladdin, jasmine])
+    friendLikeMe = new Song("Friend Like Me", [genie])
+    princeAli = new Song("Aladdin", [genie])
     songArray = [aWholeNewWorld, friendLikeMe]
 
-    aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
+    aladdinSoundtrack = new Soundtrack("Aladdin", songArray)
   })
 
-  it('defines a Soundtrack object', () => {
+  it("defines a Soundtrack object", () => {
     expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
   })
 
-  it('has an initialized name property', () => {
-    expect(aladdinSoundtrack.name).toBe('Aladdin')
+  it("has an initialized name property", () => {
+    expect(aladdinSoundtrack.name).toBe("Aladdin")
   })
 
-  it('has an initialized songs array property', () => {
+  it("has an initialized songs array property", () => {
     expect(aladdinSoundtrack.songs).toBe(songArray)
   })
 
-  describe('#addSong', () => {
-    it('adds a song to the songs array', () => {
+  describe("#addSong", () => {
+    it("adds a song to the songs array", () => {
       expect(aladdinSoundtrack.songs.length).toBe(2)
 
       aladdinSoundtrack.addSong(princeAli)
@@ -48,10 +48,10 @@ describe('Soundtrack class', () => {
     })
   })
 
-  describe('#printSoundtrack', () => {
-    it('prints out the soundtrack song listing', () => {
+  describe("#printSoundtrack", () => {
+    it("prints out the soundtrack song listing", () => {
       expect(aladdinSoundtrack.printSoundtrack()).toBe(
-        'A Whole New World\nFriend Like Me\n'
+        "A Whole New World\nFriend Like Me\n"
       )
     })
   })
