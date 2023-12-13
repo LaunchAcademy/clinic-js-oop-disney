@@ -11,24 +11,27 @@ describe('Character class', () => {
     jafar = new Character('Jafar', 'human', 'Jonathan Freeman', 'villain')
   })
 
-  it('defines a character object', () => {
-    expect(genie).toBeInstanceOf(Character)
-  })
+  // these "property" tests are only here for students, but normally wouldnt be needed on the job
+  describe("initial properies", () => {
+    it('defines a character object', () => {
+      expect(genie).toBeInstanceOf(Character)
+    })
 
-  it('has an initialized name property', () => {
-    expect(genie.name).toBe('Genie')
-  })
+    it('has an initialized name property', () => {
+      expect(genie.name).toBe('Genie')
+    })
 
-  it('has an initialized species property', () => {
-    expect(genie.species).toBe('genie')
-  })
+    it('has an initialized species property', () => {
+      expect(genie.species).toBe('genie')
+    })
 
-  it('has an initialized actor property', () => {
-    expect(genie.actor).toBe('Robin Williams')
-  })
+    it('has an initialized actor property', () => {
+      expect(genie.actor).toBe('Robin Williams')
+    })
 
-  it('has an initialized alignmentType property', () => {
-    expect(genie.alignmentType).toBe('hero')
+    it('has an initialized alignmentType property', () => {
+      expect(genie.alignmentType).toBe('hero')
+    })
   })
 
   describe('#summary', () => {
