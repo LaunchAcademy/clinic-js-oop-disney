@@ -26,5 +26,3 @@ songArray = [aWholeNewWorld, friendLikeMe]
 
 aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
 aladdinMovie = new Movie('Aladdin', 1992, characterArray, aladdinSoundtrack)
-
-debugger

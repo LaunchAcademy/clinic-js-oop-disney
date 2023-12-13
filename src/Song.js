@@ -1,7 +1,7 @@
 class Song { 
-    constructor(title, characterList) {
-    this.title = title 
-    this.characterList = characterList
+  constructor(name, characterArray) {
+    this.name = name 
+    this.characterList = characterArray
   }
 }
 

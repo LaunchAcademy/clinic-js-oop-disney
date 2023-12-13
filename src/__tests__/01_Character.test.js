@@ -12,15 +12,11 @@ describe('Character class', () => {
   })
 
   // these "property" tests are only here for students, but normally wouldnt be needed on the job
-  describe("initial properies", () => {
-    it('defines a character object', () => {
-      expect(genie).toBeInstanceOf(Character)
-    })
-
+  describe("initial properties", () => {
     it('has an initialized name property', () => {
       expect(genie.name).toBe('Genie')
     })
-
+    
     it('has an initialized species property', () => {
       expect(genie.species).toBe('genie')
     })

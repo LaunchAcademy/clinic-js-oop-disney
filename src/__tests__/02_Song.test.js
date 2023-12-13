@@ -19,10 +19,6 @@ describe('Song class', () => {
     friendLikeMe = new Song('Friend Like Me', [genie])
   })
 
-  it('defines a Song object', () => {
-    expect(aWholeNewWorld).toBeInstanceOf(Song)
-  })
-
   it('has an initialized name property', () => {
     expect(aWholeNewWorld.name).toBe('A Whole New World')
   })

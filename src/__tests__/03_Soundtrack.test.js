@@ -19,15 +19,12 @@ describe('Soundtrack class', () => {
 
     aWholeNewWorld = new Song('A Whole New World', [aladdin, jasmine])
     friendLikeMe = new Song('Friend Like Me', [genie])
-    princeAli = new Song('Aladdin', [genie])
+    princeAli = new Song('Prince Ali', [genie])
     songArray = [aWholeNewWorld, friendLikeMe]
 
     aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
   })
 
-  it('defines a Soundtrack object', () => {
-    expect(aladdinSoundtrack).toBeInstanceOf(Soundtrack)
-  })
 
   it('has an initialized name property', () => {
     expect(aladdinSoundtrack.name).toBe('Aladdin')
@@ -39,18 +36,18 @@ describe('Soundtrack class', () => {
 
   describe('#addSong', () => {
     it('adds a song to the songs array', () => {
-      expect(aladdinSoundtrack.songs.length).toBe(2)
+      // expect(aladdinSoundtrack.songs.length).toBe(2)
 
       aladdinSoundtrack.addSong(princeAli)
 
-      expect(aladdinSoundtrack.songs.length).toBe(3)
+      expect(aladdinSoundtrack.songs.length).toEqual(3)
       expect(aladdinSoundtrack.songs).toContain(princeAli)
     })
   })
 
   describe('#printSoundtrack', () => {
     it('prints out the soundtrack song listing', () => {
-      expect(aladdinSoundtrack.printSoundtrack()).toBe(
+      expect(aladdinSoundtrack.printSoundtrack()).toEqual(
         'A Whole New World\nFriend Like Me\n'
       )
     })

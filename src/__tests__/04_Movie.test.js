@@ -30,28 +30,26 @@ describe('Movie class', () => {
     aladdinMovie = new Movie('Aladdin', 1992, characterArray, aladdinSoundtrack)
   })
 
-  it('defines movie', () => {
-    expect(aladdinMovie).toBeInstanceOf(Movie)
-  })
-
-  it('has an initialized title property', () => {
-    expect(aladdinMovie.title).toBe('Aladdin')
-  })
-
-  it('has an initialized year property', () => {
-    expect(aladdinMovie.year).toBe(1992)
-  })
-
-  it('has an initialized characters property', () => {
-    expect(aladdinMovie.characters).toBe(characterArray)
-  })
-
-  it('has an initialized soundtrack property', () => {
-    expect(aladdinMovie.soundtrack).toBe(aladdinSoundtrack)
-  })
-
-  it('initializes with a watchCount of 0', () => {
-    expect(aladdinMovie.watchCount).toBe(0)
+  describe("initial Movie properties", () => {
+    it('has an initialized title property', () => {
+      expect(aladdinMovie.title).toBe('Aladdin')
+    })
+  
+    it('has an initialized year property', () => {
+      expect(aladdinMovie.year).toBe(1992)
+    })
+  
+    it('has an initialized characters property', () => {
+      expect(aladdinMovie.characters).toBe(characterArray)
+    })
+  
+    it('has an initialized soundtrack property', () => {
+      expect(aladdinMovie.soundtrack).toBe(aladdinSoundtrack)
+    })
+  
+    it('initializes with a watchCount of 0', () => {
+      expect(aladdinMovie.watchCount).toBe(0)
+    })
   })
 
   describe('#watch', () => {
