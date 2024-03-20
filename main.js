@@ -25,3 +25,22 @@ songArray = [aWholeNewWorld, friendLikeMe]
 
 aladdinSoundtrack = new Soundtrack('Aladdin', songArray)
 aladdinMovie = new Movie('Aladdin', 1992, characterArray, aladdinSoundtrack)
+
+
+// // Statement
+// class Person {}
+
+// let me = "Nick"
+
+// if (true === true) {
+
+// }
+
+// const hello = () => {
+//   return "hi"
+// }
+
+// // Expression
+
+// console.log(me)
+// hello()

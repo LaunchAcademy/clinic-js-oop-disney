@@ -1,10 +1,9 @@
-class Movie { 
+class Movie {
   constructor(title, year, characters, soundtrack) {
     this.title = title 
-    this.year = year
-    this.characters = characters
-    this.soundtrack = soundtrack
-    // default property
+    this.year = year 
+    this.characters = characters 
+    this.soundtrack = soundtrack 
     this.watchCount = 0
   }
 
@@ -12,38 +11,39 @@ class Movie {
     this.watchCount += 1
   }
 
-  addCharacter(newCharacter) {
-    this.characters.push(newCharacter)
+  addCharacter(characterObject) {
+    this.characters.push(characterObject)
   }
 
-  heroes() {
+  heroes(){
     let heroesString = ""
 
-    this.characters.forEach((character) => {
+    this.characters.forEach(character => {
       if (character.isHero()) {
         heroesString += `${character.name}\n`
       }
     })
-    
+
     return heroesString
   }
 
-  villains() {
+   villains(){
     let villainsString = ""
 
-    this.characters.forEach((character) => {
-      if (character.isHero() === false) {
+    this.characters.forEach(character => {
+      if (character.isHero() !== true) {
         villainsString += `${character.name}\n`
       }
     })
-    
+
     return villainsString
   }
 
   cast() {
     let castString = ""
-    this.characters.forEach(characterObject => {
-      castString += `${characterObject.actor}\n`
+
+    this.characters.forEach(character => {
+      castString += `${character.actor}\n`
     })
 
     return castString
@@ -51,3 +51,5 @@ class Movie {
 }
 
 export default Movie
+// title, year, characters, soundtrack, watchCount
+// aladdinMovie = new Movie('Aladdin', 1992, characterArray, aladdinSoundtrack)

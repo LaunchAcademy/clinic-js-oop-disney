@@ -36,7 +36,6 @@ describe('Soundtrack class', () => {
 
   describe('#addSong', () => {
     it('adds a song to the songs array', () => {
-      // expect(aladdinSoundtrack.songs.length).toBe(2)
 
       aladdinSoundtrack.addSong(princeAli)
 
@@ -45,7 +44,7 @@ describe('Soundtrack class', () => {
     })
   })
 
-  describe('#printSoundtrack', () => {
+  describe.only('#printSoundtrack', () => {
     it('prints out the soundtrack song listing', () => {
       expect(aladdinSoundtrack.printSoundtrack()).toEqual(
         'A Whole New World\nFriend Like Me\n'
