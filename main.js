@@ -12,7 +12,6 @@ let aWholeNewWorld
 let friendLikeMe
 let songArray
 let aladdinSoundtrack
-let aladdinMovie
 
 aladdin = new Character('Aladdin', 'human', 'Scott Weinger', 'hero')
 genie = new Character('Genie', 'genie', 'Robin Williams', 'hero')
